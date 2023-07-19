@@ -1,2 +1,224 @@
-$$3x$$
-teste 2
+% Modelo de Aula em LaTeX
+% IFRS - Ibirubá
+% Se utilizar o Overleaf, clique em RICH TEXT acima para uma visualização mais suave do código!
+
+\documentclass[a4paper,11pt]{article}
+
+%-------------------------------------------------------------------------
+% PACOTES (não é necessário alterar nada) 
+%-------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel} 
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{color}
+\usepackage{mdframed}
+\usepackage{hyperref} 
+\usepackage{qrcode}
+\usepackage{geometry} 
+\usepackage{pgfplots}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd,amsxtra} 
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,fit,arrows,through,calc,shapes.geometric,patterns,decorations.markings}
+\usepackage{pgf,pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\definecolor{myblue}{RGB}{56,94,141}
+\definecolor{mygreen}{RGB}{51,153,0}
+\definecolor{myred}{RGB}{204,0,0}
+\usepackage{setspace}
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+
+%-------------------------------------------------------------------------
+% CABEÇALHO (não é necessário alterar nada) 
+%-------------------------------------------------------------------------
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{minipage}{6cm} %Logo do IFPR
+\resizebox{6cm}{1.6cm}{
+\begin{tikzpicture}[square/.style={regular polygon,regular polygon sides=4}]
+\tikzset{mynode/.style={square,rounded corners,draw=mygreen, top color=mygreen, bottom color=mygreen,very thick, text centered},}  
+\node[circle, draw=myred , top color=myred, bottom color=myred] (q1) {$\quad$};
+\node[mynode, below=0.08cm of q1] (q2) {$\;\;$};
+\node[mynode, below=0.08cm of q2] (q3) {$\;\;$};
+\node[mynode, below=0.08cm of q3] (q4) {$\;\;$};
+\node[mynode, right=0.08cm of q1] (q5) {$\;\;$};
+\node[mynode, below=0.08cm of q5] (q6) {$\;\;$};
+\node[mynode, below=0.08cm of q6] (q7) {$\;\;$};
+\node[mynode, below=0.08cm of q7] (q8) {$\;\;$};
+\node[mynode, right=0.08cm of q5] (q9) {$\;\;$};
+\node[mynode, right=0.08cm of q7] (q10) {$\;\;$};
+\node[right=0.08cm of q8] (aux) {};
+\node[text centered, right=0.06cm of q10] (q11) {\huge \sf \textbf{INSTITUTO FEDERAL}};
+\node[mygreen, text centered, right=0.5cm of aux] (q12) {\huge\textsf{Rio Grande do Sul}};
+\end{tikzpicture}}
+\end{minipage}
+\begin{minipage}{7cm}
+\begin{center}
+\begin{footnotesize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\Large \texttt{Exame}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{footnotesize}
+\end{center}
+\end{minipage}
+\begin{minipage}{4cm}
+\centering
+\includegraphics[scale=0.12]{meBrasil.png}\\
+\begin{scriptsize}
+\textsf{Ministério da Educação}
+\end{scriptsize}
+\end{minipage}
+\doublespacing
+\begin{center}
+
+\textbf{Engenharia Mecânica}  \ $-$ \ \textbf{Valor: 10,0}  \\
+
+\textbf{Álgebra Linear e Geometria Analítica}  \ $-$ \ \textbf{Professor Me. Leomir A. S. Grave}   \\
+
+\end{center}
+
+\textbf{Nome:} \rule{12cm}{0.2mm} Data: 19/07/2023
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% Escreva a Aula a partir daqui %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 1} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Resolva, em $\mathbb{R}$, a equação:
+
+
+\[
+\begin{array}{|ccc|}
+4x & 5 & - 3  \\
+0 &  1 & - 1  \\
+3x &  1 &  0 
+\end{array}=1
+\]
+
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 2} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+
+Seja a matriz $A=\begin{pmatrix}
+2 & 5 & - 3  \\
+0 &  1 & - 1  \\
+2 &  1 &  0 
+\end{pmatrix}$ 
+e 
+$B=\begin{pmatrix}
+0 & 2 & - 1  \\
+2 &  1 & - 2  \\
+0 &  1 &  -5 
+\end{pmatrix}
+$\\
+Determine\\
+$$2\cdot A-3\cdot B$$
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 3} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Resolva e classifique o sistema linear abaixo:
+
+\begin{equation*}
+\left\{
+\begin{matrix}
+2x +  y  -  2z  =  10\\
+x  +  y   =  3\\
+5x  +  4y  =  13
+\end{matrix}
+\right.
+\end{equation*} 
+
+
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 4} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Sejam dados os vetores $\vec u=(1,3,-2)$ e $\vec v=(2,-1,4)$, determine
+$$2\cdot \vec u + (\vec v)^2$$
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 5} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Calcule a soma de dois vetores, sendo $|\vec{F_1}|=8$, $|\vec{F_2}|=4$ e o ângulo entre eles $\alpha=60^{\circ}$.
+\\
+\\
+\\
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 6} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Dados $\vec{s}=(0, 2, -2)$ e $\vec{t}=(3, 0, 3)$, determine o ângulo entre esses dois vetores. 
+\\
+\\
+\\
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 7} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Verifique se o conjunto $W$ é um subespaço vetorial de $\mathbb{R}^2$, sendo $W=\{(x,y):x=y+5\};$ 
+\\
+\\
+\\
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 8} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Os vetores $u_1 = (2, 3)$, $u_2 = (3, \dfrac{9}{2})$ são linearmente independentes (LI) ou linearmente dependentes (LD)?
+\\
+\\
+\\
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 9} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Verifique se $f: \mathbb{R}^2 \longrightarrow \ \mathbb{R}^2, \ f(x,y)=(x-7,2y+3)$ é uma transformação linear.
+\\
+\\
+\\
+
+\begin{mdframed}[backgroundcolor=gray!20]
+\textbf{Questão 10} -- \textit{Peso: 1,0}
+\end{mdframed}
+
+Verifique se o vetor $(5,7)$ pertence ao conjunto $Im(f)$, sendo $f: \mathbb{R}^2 \longrightarrow \ \mathbb{R}^2, \ f(x,y)=(2x-3y, x+5y)$.\\
+
+
+%%%%%%%%%%%%%%%%%
+%%%% QR Code %%%%
+%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.6\textwidth}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\begin{flushright}
+\qrcode[height=1.5cm]{https://cocalc.com/share/projects/0bcdf659-4413-4a53-be1f-ea354707091c}
+\end{flushright}
+\end{minipage}
+
+\end{document}
